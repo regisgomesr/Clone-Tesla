@@ -1,6 +1,6 @@
 import React, { useCallback, useRef, useState } from "react";
 
-import ModelsContent, { CarModel } from "../ModelsContext";
+import ModelsContext, { CarModel } from "../ModelsContext";
 
 import { Container } from "./styles";
 
@@ -29,7 +29,7 @@ const ModelsWrapper: React.FC = ({ children }) => {
   );
 
   return (
-    <ModelsContent.Provider
+    <ModelsContext.Provider
       value={{
         wrapperRef,
         registeredModels,
@@ -39,7 +39,7 @@ const ModelsWrapper: React.FC = ({ children }) => {
       }}
     >
       <Container ref={wrapperRef}>{children}</Container>;
-    </ModelsContent.Provider>
+    </ModelsContext.Provider>
   );
 };
 

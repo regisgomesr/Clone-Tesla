@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 export interface CarModel {
   modelName: string;
   overlayNode: ReactNode;
-  sectionRef: React.RefObject<HTMLElement>;
+  sectionRef: React.RefObject<HTMLDivElement>;
 }
 
 interface ModelsContext {
-  wrapperRef: React.RefObject<HTMLElement>;
+  wrapperRef: React.RefObject<HTMLDivElement>;
   registeredModels: CarModel[];
   registerModel: (model: CarModel) => void;
   unregisterModel: (modelName: string) => void;
